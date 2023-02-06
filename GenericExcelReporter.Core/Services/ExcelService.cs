@@ -14,10 +14,11 @@ namespace GenericExcelReporter.Core.Services
         public async Task<ExcelFileDto> ExportToExcel<T>(List<T> model, string fileName)
 
         {
-            string sWebRootFolder = "Excel";// _hostingEnvironment.WebRootPath;
-            Directory.CreateDirectory(sWebRootFolder);
+            //Web Root Path
+            string rootFolder = "Excel"; ;
+            Directory.CreateDirectory(rootFolder);
             string sFileName = DateTime.Now.ToString("yy-MM-dd-hh-mm") + $"{fileName}.xlsx";
-            var file = new FileInfo(Path.Combine(sWebRootFolder, sFileName));
+            var file = new FileInfo(Path.Combine(rootFolder, sFileName));
 
             var memory = new MemoryStream();
             ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
@@ -44,7 +45,6 @@ namespace GenericExcelReporter.Core.Services
 
                     a++;
                 }
-                //worksheet.Cells.DataValidation.AddCustomDataValidation();
                 titleCells.Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Center;
                 titleCells.Style.VerticalAlignment = OfficeOpenXml.Style.ExcelVerticalAlignment.Center;
 
@@ -52,8 +52,6 @@ namespace GenericExcelReporter.Core.Services
                 {
                     worksheet.Cells["A2"].LoadFromCollection(model);
                     worksheet.Cells["A2"].Style.Numberformat.Format = "@";
-
-                    //worksheet.Cells["A1:A25"].Style.Numberformat.Format = "@";
                 }
 
                 ExcelRange range = worksheet.Cells[1, 1, worksheet.Dimension.End.Row, worksheet.Dimension.End.Column];
@@ -61,11 +59,9 @@ namespace GenericExcelReporter.Core.Services
 
                 tab.TableStyle = TableStyles.Light18;
                 worksheet.Cells[worksheet.Dimension.Address].AutoFitColumns();
-                //worksheet.Cells["A1"].LoadFromDataTable(model, true);
-
                 await package.SaveAsync(); //Save the workbook.
             }
-            await using (var stream = new FileStream(Path.Combine(sWebRootFolder, sFileName), FileMode.Open))
+            await using (var stream = new FileStream(Path.Combine(rootFolder, sFileName), FileMode.Open))
 
             {
                 await stream.CopyToAsync(memory);
