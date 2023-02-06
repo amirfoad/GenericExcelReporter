@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Playground", "Playground", "{5A14C702-A738-42C2-9928-1E440DFA27E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericExcelReporter.Core", "GenericExcelReporter.Core\GenericExcelReporter.Core.csproj", "{90BF91A6-AB00-4C33-8713-BBC32AE8FE61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericExcelReporter.Playground.Mvc", "GenericExcelReporter.Playground.Mvc\GenericExcelReporter.Playground.Mvc.csproj", "{ABB9668E-735C-4C91-A0B8-714B1E71348E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90BF91A6-AB00-4C33-8713-BBC32AE8FE61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90BF91A6-AB00-4C33-8713-BBC32AE8FE61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90BF91A6-AB00-4C33-8713-BBC32AE8FE61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90BF91A6-AB00-4C33-8713-BBC32AE8FE61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABB9668E-735C-4C91-A0B8-714B1E71348E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABB9668E-735C-4C91-A0B8-714B1E71348E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABB9668E-735C-4C91-A0B8-714B1E71348E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABB9668E-735C-4C91-A0B8-714B1E71348E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ABB9668E-735C-4C91-A0B8-714B1E71348E} = {5A14C702-A738-42C2-9928-1E440DFA27E1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8EB2B1ED-F86B-49FF-861D-2C9452C008E3}
+	EndGlobalSection
+EndGlobal
