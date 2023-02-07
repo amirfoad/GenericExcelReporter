@@ -21,10 +21,10 @@ namespace GenericExcelReporter.Playground.Mvc.Controllers
 
                 {
                     new UserDto()
-                    { FirstName = "Amirfoad", LastName = "Ahmadi", PhoneNumber = "09121233434" },
+                    { FirstName = "Amirfoad", LastName = "Ahmadi", PhoneNumber = "09121233434",Age=22 },
 
                     new UserDto()
-                    { FirstName = "Amirreza", LastName = "Ahmadi", PhoneNumber = "09121233434" },
+                    { FirstName = "Amirreza", LastName = "Ahmadi", PhoneNumber = "09121233434",Age=28 },
                 };
             }
         }

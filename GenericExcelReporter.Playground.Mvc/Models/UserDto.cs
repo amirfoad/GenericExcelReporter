@@ -12,5 +12,8 @@ namespace GenericExcelReporter.Playground.Mvc.Models
 
         [Display(Name = "شماره موبایل")]
         public string PhoneNumber { get; set; }
+
+        [Display(Name = "سن")]
+        public int Age { get; set; }
     }
 }
